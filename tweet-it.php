@@ -21,13 +21,14 @@ class tweet_it {
 		$permalink = get_permalink( $post_id );
 		$the_tweet = ucfirst( strip_tags( $tweet_content ) );
 
-		$ret = '<span class="tweet-it">';
-		$ret .= '<a href="https://twitter.com/intent/tweet?original_referer=' . urlencode($permalink) . '&source=tweetbutton&text=' . rawurlencode(($tweet_content)) . '&url=' . urlencode($permalink) .' >$tweet_content&thinsp;<i class="fa fa-twitter"></i>';
-		$ret .= '</a>';
-		$ret .= '<span class="sharebuttons">';
-		$ret .= '<a href="https://twitter.com/intent/tweet?original_referer=' . urlencode($permalink) . '&source=tweetbutton&text=' . rawurlencode(($tweet_content)) . '&url=' . urlencode($permalink). '">TWEET';
-		$ret .= '</a>';
-		$ret .= '</span></span>';
+		$ret = "<span class='tweet-it'>";
+		$ret .= "<a href='https://twitter.com/intent/tweet?original_referer=".urlencode($permalink)."&source=tweetbutton&text=".rawurlencode(($tweetcontent)) ."&url=".urlencode($permalink)."'>$content&thinsp;<i class='fa fa-twitter'></i>";
+		$ret .= "</a>";
+		$ret .= "<span class='sharebuttons'>";
+
+		$ret .= "<a href='https://twitter.com/intent/tweet?original_referer=".urlencode($permalink)."&source=tweetbutton&text=".rawurlencode(($tweetcontent)) ."&url=".urlencode($permalink)."'>Tweet";
+		$ret .= "</a>";
+		$ret .= "</span></span>";
 
 		return $ret;
 	}
