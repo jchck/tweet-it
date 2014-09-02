@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Tweet It
-Version: 0.0.0
+Version: 1.0.0
 Plugin URI: http://justinchick.com
 Description: A Wordpress plugin to make it easier for your readers to tweet your content
 Author: Justin Chick
