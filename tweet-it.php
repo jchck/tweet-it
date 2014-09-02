@@ -34,3 +34,15 @@ class tweet_it {
 }
 
 $tweet_it = new tweet_it();
+
+function tweet_it_scripts(){
+	$plugin_dir = trailingslashit( get_bloginfo( wpurl ) ) . PLUGINDIR . '/' . dirname( plugin_basename( __FILE__ ) );
+
+	if (! is_admin()){
+		wp_enqueue_style( 'tweet-it-style', $plugin_dir . '/assets/styles.css', false, null );
+		wp_enqueue_style( 'tweet-it-fa', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', false, null );
+
+		wp_enqueue_script( 'tweet-it-script', $plugin_dir . '/assets/scripts.js', 'jquert', null, true );
+	}
+}
+add_action('wp_enqueue_scripts', 'tweet_it_scripts');
