@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
-  $(".tweetable").hover(
+  $(".tweet-it").hover(
       function(){
-            if ($(this).data('vis') != true) {
+            if ($(this).data('vis') !== true) {
                     $(this).data('vis', true);
                     $(this).find('.sharebuttons').fadeIn(200);
             }
@@ -13,4 +13,4 @@ jQuery(document).ready(function($){
                     $(this).data('leftSet', false);
             }
       });
-});	
+});

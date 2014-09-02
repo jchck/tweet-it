@@ -1,13 +1,13 @@
-.tweetable {
+.tweet-it {
 	position: relative;
 }
-.tweetable a { 
+.tweet-it a { 
 	text-decoration: none; 
 	border-bottom: 0px dotted #ed2e24; 
 	color: #333; 
 	background: whitesmoke; 
 }
-.tweetable a:hover { 
+.tweet-it a:hover { 
 	text-decoration: none; 
 	border-bottom: 0px dotted #ed2e24; 
 	color: #ed2e24;
